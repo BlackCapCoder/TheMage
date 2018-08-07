@@ -1,0 +1,16 @@
+main {
+  display: flex;
+  padding: 30px;
+}
+
+#sidebar { flex: 0.3; }
+#tabs    { flex: 0.7; }
+
+.tab {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.page {
+  padding: 20px;
+}

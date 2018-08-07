@@ -11,10 +11,29 @@
   </head>
   <body>
 
-    <p>You are stading in your cellar. You should clean it soon</p>
-    <button onclick="onBoxMoved()">Move a box</button>
-    <br><br>
-    <p>Boxes moved: <span class="boxes-moved"></span></p>
+    <main role="main">
+      <div id="sidebar">
+        ring
+      </div>
+
+      <div id="tabs">
+        <div id="header">
+          <span class="tab active" data-tab-id="tab1">Tab 1</span>
+          <span class="tab" data-tab-id="tab2">Tab 2</span>
+          <span class="tab" data-tab-id="tab3">Tab 3</span>
+        </div>
+        <div class="content">
+          <div class="page" data-tab-id="tab1">
+            <p>You are stading in your cellar. You should clean it soon</p>
+            <button onclick="onBoxMoved()">Move a box</button>
+            <br><br>
+            <p>Boxes moved: <span class="boxes-moved"></span></p>
+          </div>
+          <div class="page" data-tab-id="tab2"></div>
+          <div class="page" data-tab-id="tab3"></div>
+        </div>
+      </div>
+    </main>
 
   </body>
 </html>

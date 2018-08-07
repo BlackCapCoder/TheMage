@@ -5,6 +5,21 @@ window.addEventListener('load', _ => {
     , [ document.querySelector('.boxes-moved') ]
     , [ boxEvent ]
     );
+
+  mkResource
+    ( 'mana'
+    , 0
+    , [ document.querySelector('#mana-val') ]
+    , [ ]
+    );
+
+  mkResource
+    ( 'manaMax'
+    , 100
+    , [ document.querySelector('#mana-max') ]
+    , [ ]
+    );
+
 });
 
 var boxEvent = (function () {

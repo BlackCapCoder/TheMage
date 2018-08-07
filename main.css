@@ -24,3 +24,11 @@ main {
 /* This would eventually be hidden compleatly */
 * { opacity: 1; transition: opacity 2.0s ease; }
 .hidden { opacity: 0.3 !important; }
+
+#ring { position: relative; }
+#mana {
+  position: absolute;
+  left: 50%;
+  top: 64%;
+  transform: translate(-50%, -50%);
+}

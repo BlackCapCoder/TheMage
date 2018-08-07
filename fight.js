@@ -42,7 +42,7 @@ function pokeCritter (damage) {
 
 function onCritterMurdered (c) {
   const goldGained = c.g + Math.round((Math.random() * 2 - 1) * c.gr);
-  resources.gold.val += c.g + goldGained;
+  resources.gold.val += goldGained;
   resources.exp.val  += c.e;
 
   log ("You have defeated the " + c.name +"! You gain " + goldGained + " gold and " + c.e + " exp!");

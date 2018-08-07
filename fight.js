@@ -1,10 +1,10 @@
 critter  = {};
 critters =
-  [ { name: "small spider", hp: 4, g: 3,  e: 1}
-  , { name: "mouse",        hp: 7, g: 6,  e: 3}
-  , { name: "kitten",       hp: 9, g: 2,  e: 8}
-  , { name: "chicken",      hp: 6, g: 4,  e: 4}
-  , { name: "soft cloud",   hp: 8, g: 10, e: 2}
+  [ { name: "small spider", hp: 4, g: 3,  gr: 2, e: 1}
+  , { name: "mouse",        hp: 7, g: 6,  gr: 2, e: 3}
+  , { name: "kitten",       hp: 9, g: 2,  gr: 2, e: 8}
+  , { name: "chicken",      hp: 6, g: 4,  gr: 2, e: 4}
+  , { name: "soft cloud",   hp: 8, g: 10, gr: 2, e: 2}
   ];
 
 
@@ -35,16 +35,17 @@ function pokeCritter (damage) {
   critter.hp = Math.max(0, critter.hp - damage);
   renderCritterHP(critter.hp, critter.max);
   if (critter.hp > 0) return;
-  onCritterMurdered(critter)
+  onCritterMurdered(critter);
   setTimeout(drawCritter, 1000);
 }
 
 
 function onCritterMurdered (c) {
-  resources.gold.val += c.g;
+  const goldGained = c.g + Math.round((Math.random() * 2 - 1) * c.gr);
+  resources.gold.val += c.g + goldGained;
   resources.exp.val  += c.e;
 
-  log ("You have defeated the " + c.name +"! You gain " + c.g + " gold and " + c.e + " exp!");
+  log ("You have defeated the " + c.name +"! You gain " + goldGained + " gold and " + c.e + " exp!");
 }
 
 function onLoad(){

@@ -25,7 +25,7 @@ function log (msg) {
   el.classList.add('log-message');
   el.innerText = getTimestamp() + " " + msg;
 
-  const wasBottom = log.scrollTop + log.clientHeight >= log.scrollHeight;
+  const wasBottom = log.scrollTop + log.clientHeight + 10 >= log.scrollHeight;
   cont.insertBefore(el, cont.children[0]);
 
   if (cont.children.length > 30) {

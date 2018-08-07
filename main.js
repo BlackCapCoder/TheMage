@@ -11,10 +11,3 @@ window.addEventListener('load', _ => {
     };
   }
 });
-
-
-window.addEventListener('load', _ => {
-  setInterval (_ => {
-    resources.mana.val = Math.min(resources.mana.val+1, resources.manaMax.val);
-  }, 1000);
-});

@@ -25,7 +25,10 @@ main {
 * { opacity: 1; transition: opacity 2.0s ease; }
 .hidden { opacity: 0.3 !important; }
 
-#ring { position: relative; }
+#ring {
+  position: relative;
+  display: inline-block;
+}
 #mana {
   position: absolute;
   left: 50%;

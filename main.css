@@ -9,8 +9,14 @@ main {
 .tab {
   border: 1px solid black;
   padding: 5px;
+  cursor: pointer;
 }
 
 .page {
   padding: 20px;
+}
+
+.page:not(.active) { display: none !important; }
+.tab.active {
+  background: lightgray;
 }

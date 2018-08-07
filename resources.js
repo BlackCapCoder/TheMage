@@ -22,3 +22,41 @@ function mkResource ( name         // The name of the resource
   return r;
 }
 
+
+window.addEventListener('load', _ => {
+  mkResource
+    ( 'boxesMoved'
+    , 0
+    , [ document.querySelector('.boxes-moved') ]
+    , [ boxEvent ]
+    );
+
+  mkResource
+    ( 'mana'
+    , 0
+    , [ document.querySelector('#mana-val') ]
+    , [ ]
+    );
+
+  mkResource
+    ( 'manaMax'
+    , 100
+    , [ document.querySelector('#mana-max') ]
+    , [ ]
+    );
+
+  mkResource
+    ( 'gold'
+    , 0
+    , [ document.querySelector('#gold') ]
+    , [ ]
+    );
+
+  mkResource
+    ( 'exp'
+    , 0
+    , [ document.querySelector('#exp') ]
+    , [ ]
+    );
+
+});

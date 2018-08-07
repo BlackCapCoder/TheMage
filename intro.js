@@ -1,26 +1,3 @@
-window.addEventListener('load', _ => {
-  mkResource
-    ( 'boxesMoved'
-    , 0
-    , [ document.querySelector('.boxes-moved') ]
-    , [ boxEvent ]
-    );
-
-  mkResource
-    ( 'mana'
-    , 0
-    , [ document.querySelector('#mana-val') ]
-    , [ ]
-    );
-
-  mkResource
-    ( 'manaMax'
-    , 100
-    , [ document.querySelector('#mana-max') ]
-    , [ ]
-    );
-
-});
 
 var boxEvent = (function () {
   let ringFound = false;

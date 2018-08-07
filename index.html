@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="main.css" type="text/css" media="all" />
     <script src="resources.js"></script>
     <script src="intro.js"></script>
+    <script src="fight.js"></script>
     <script src="main.js"></script>
   </head>
   <body>
@@ -50,22 +51,31 @@
             ''::::::::::::''
           </pre>
         </div>
+
+        <p>Gold: <span id="gold">0</span></p>
+        <p>Exp:  <span id="exp">0</span></p>
       </div>
 
       <div id="tabs">
         <div id="header">
-          <span class="tab active" data-tab-id="tab1">Tab 1</span>
-          <span class="tab" data-tab-id="tab2">Tab 2</span>
+          <span class="tab active" data-tab-id="tab1">Basemet</span>
+          <span class="tab" data-tab-id="tab2">Portal</span>
           <span class="tab" data-tab-id="tab3">Tab 3</span>
         </div>
         <div id="content">
           <div class="page active" data-tab-id="tab1">
-            <p>You are stading in your cellar. You should clean it soon</p>
+            <p>You are stading in your dusty basement. You should really clean this place soon..</p>
             <button onclick="onBoxMoved()">Move a box</button>
             <br><br>
             <p>Boxes moved: <span class="boxes-moved"></span></p>
           </div>
-          <div class="page" data-tab-id="tab2"></div>
+          <div class="page" data-tab-id="tab2">
+            <p id="fight-msg">Oh noes! You accidentally opened a portal with your ring or spells or whatever. Now small critters are pouring out!</p>
+            <br>
+            <p>A fearfull <span id="critter-name">umbrella</span> carefully poke its head out</p>
+            <p>HP <span id='critter-hp'>====================</span></p>
+            <button onclick="pokeCritter(1)">Poke agressively</button>
+          </div>
           <div class="page" data-tab-id="tab3"></div>
         </div>
       </div>

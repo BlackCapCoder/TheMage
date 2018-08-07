@@ -32,3 +32,5 @@ main {
   top: 64%;
   transform: translate(-50%, -50%);
 }
+
+#critter-hp { font-family: monospace; }

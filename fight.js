@@ -1,10 +1,10 @@
 critter  = {};
 critters =
-  [ { name: "small spider", hp: 4 }
-  , { name: "mouse",        hp: 7 }
-  , { name: "kitten",       hp: 9 }
-  , { name: "chicken",      hp: 6 }
-  , { name: "soft cloud",   hp: 8 }
+  [ { name: "small spider", hp: 4, g: 3,  e: 1}
+  , { name: "mouse",        hp: 7, g: 6,  e: 3}
+  , { name: "kitten",       hp: 9, g: 2,  e: 8}
+  , { name: "chicken",      hp: 6, g: 4,  e: 4}
+  , { name: "soft cloud",   hp: 8, g: 10, e: 2}
   ];
 
 
@@ -41,10 +41,10 @@ function pokeCritter (damage) {
 
 
 function onCritterMurdered (c) {
-  resources.gold.val += c.max;
-  resources.exp.val  += Math.floor(c.max/2);
+  resources.gold.val += c.g;
+  resources.exp.val  += c.e;
 
-  log ("You have defeated the " + c.name +"! You gain " + c.max + " gold and " + Math.floor(c.max/2) + " exp!");
+  log ("You have defeated the " + c.name +"! You gain " + c.g + " gold and " + c.e + " exp!");
 }
 
 function onLoad(){

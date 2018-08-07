@@ -1,6 +1,10 @@
 resources = {};
 
-function mkResource (name, val=0, els=[], listeners=[]) {
+function mkResource ( name         // The name of the resource
+                    , val=0        // Initial value
+                    , els=[]       // Graphical elements to update on value changes
+                    , listeners=[] // Functions to call on value changes
+                    ) {
   const r = (resources[name] = new Proxy (
     { els: els
     , listeners: listeners

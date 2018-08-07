@@ -57,7 +57,7 @@ body {
 
 log {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   overflow-y: scroll;
   height: 100px;
 }

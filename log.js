@@ -24,9 +24,9 @@ function log (msg) {
   const el = document.createElement('span');
   el.classList.add('log-message');
   el.innerText = getTimestamp() + " " + msg;
-  cont.appendChild(el);
+  cont.insertBefore(el, cont.children[0]);
 
   if (cont.children.length > 30)
-    cont.removeChild(cont.children[0]);
+    cont.removeChild(cont.children[30]);
 }
 

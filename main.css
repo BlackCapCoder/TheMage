@@ -56,8 +56,13 @@ body {
 #critter-hp { font-family: monospace; }
 
 log {
-  display: flex;
-  flex-direction: column-reverse;
   overflow-y: scroll;
   height: 100px;
+}
+log .wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 100%;
+}
+log .wrapper .log-message {
 }

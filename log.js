@@ -19,14 +19,19 @@ function getTimestamp () {
 // Doing this backwards is the easiest way to do it (going from bottom to top).
 // Conveniently, removes logs that are too old.
 function log (msg) {
-  const cont = document.querySelector('log');
-
+  const log = document.querySelector('log');
+  const cont = document.querySelector('log .wrapper');
   const el = document.createElement('span');
   el.classList.add('log-message');
   el.innerText = getTimestamp() + " " + msg;
+
+  const wasBottom = log.scrollTop + log.clientHeight >= log.scrollHeight;
   cont.insertBefore(el, cont.children[0]);
 
-  if (cont.children.length > 30)
+  if (cont.children.length > 30) {
     cont.removeChild(cont.children[30]);
+  } else if (wasBottom) {
+    log.scrollTop = log.scrollHeight;
+  }
 }
 

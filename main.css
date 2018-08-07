@@ -54,3 +54,10 @@ body {
 }
 
 #critter-hp { font-family: monospace; }
+
+log {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100px;
+}

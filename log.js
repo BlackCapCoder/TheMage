@@ -6,18 +6,27 @@ function frm(i) {
   return i;
 }
 
+function getTimestamp () {
+  const d = new Date();
+  const h = frm(d.getHours());
+  const m = frm(d.getMinutes());
+  const s = frm(d.getSeconds());
+  return "[" + h + ":" + m + ":" + s + "]";
+}
+
 
 // Moves the current logs down the chat and adds the new one to the top.
 // Doing this backwards is the easiest way to do it (going from bottom to top).
 // Conveniently, removes logs that are too old.
 function log (msg) {
-  const d = new Date();
-  const h = frm(d.getHours());
-  const m = frm(d.getMinutes());
-  const s = frm(d.getSeconds());
+  const cont = document.querySelector('log');
 
-  document.querySelector('#log-message-c').innerText = document.querySelector('#log-message-b').innerText;
-  document.querySelector('#log-message-b').innerText = document.querySelector('#log-message-a').innerText;
-  document.querySelector('#log-message-a').innerText = "[" + h + ":" + m + ":" + s + "] " + msg; 
+  const el = document.createElement('span');
+  el.classList.add('log-message');
+  el.innerText = getTimestamp() + " " + msg;
+  cont.appendChild(el);
+
+  if (cont.children.length > 30)
+    cont.removeChild(cont.children[0]);
 }
 

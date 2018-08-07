@@ -1,12 +1,19 @@
 critter  = {};
 critters =
-  [ { name: "small spider", hp: 4, g: 3,  e: 1}
-  , { name: "mouse",        hp: 7, g: 6,  e: 3}
-  , { name: "kitten",       hp: 9, g: 2,  e: 8}
-  , { name: "chicken",      hp: 6, g: 4,  e: 4}
-  , { name: "soft cloud",   hp: 8, g: 10, e: 2}
+  [ { name: "small spider", hp: 4, gmin: 1, gmax: 3,  e: 1}
+  , { name: "mouse",        hp: 7, gmin: 4, gmax: 6,  e: 3}
+  , { name: "kitten",       hp: 9, gmin: 2, gmax: 2,  e: 8}
+  , { name: "chicken",      hp: 6, gmin: 4, gmax: 5,  e: 4}
+  , { name: "soft cloud",   hp: 8, gmin: 6, gmax: 10, e: 2}
   ];
 
+
+// For the random gold value.
+// Output will be min=<X<=max
+function randInc(min, max) {
+  i = Math.floor(Math.random() * (max+1 - min) + min);
+  return i;
+}
 
 function spawnCritter (c) {
   document.querySelector('#critter-name').innerText = c.name;
@@ -41,10 +48,12 @@ function pokeCritter (damage) {
 
 
 function onCritterMurdered (c) {
-  resources.gold.val += c.g;
+
+  goldInc = randInc(c.gmin, c.gmax);
+  resources.gold.val += goldInc;
   resources.exp.val  += c.e;
 
-  log ("You have defeated the " + c.name +"! You gain " + c.g + " gold and " + c.e + " exp!");
+  log ("You have defeated the " + c.name +"! You gain " + goldInc + " gold and " + c.e + " exp!");
 }
 
 function onLoad(){

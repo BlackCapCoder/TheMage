@@ -20,3 +20,7 @@ main {
 .tab.active {
   background: lightgray;
 }
+
+/* This would eventually be hidden compleatly */
+* { opacity: 1; transition: opacity 2.0s ease; }
+.hidden { opacity: 0.3 !important; }

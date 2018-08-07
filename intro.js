@@ -12,7 +12,7 @@ var boxEvent = (function () {
   return val => {
     if (ringFound || val < 10) return;
     ringFound = true;
-    alert("You found a ring!");
+    document.querySelector('#ring').classList.remove('hidden');
   };
 })();
 

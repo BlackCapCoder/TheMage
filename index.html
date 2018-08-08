@@ -68,24 +68,35 @@
       <div id="tabs">
         <div id="header" class="hidden">
           <a class="tab active" data-tab-id="tab1">Basement</a>
-          <a class="tab" data-tab-id="tab2">Portal</a>
-          <a class="tab" data-tab-id="tab3">Tab 3</a>
+          <a class="tab" data-tab-id="tab2">Research</a>
+          <a class="tab" data-tab-id="tab3">Portal</a>
+          <a class="tab" data-tab-id="tab4">Town</a>
+          <a class="tab" data-tab-id="tab5">Skills</a>
         </div>
         <div id="content">
+
           <div class="page active" data-tab-id="tab1">
             <p>You're standing in your dusty basement. You should really clean this place soon....</p>
             <button onclick="onBoxMoved()">Move a box</button>
             <br><br>
             <p>Boxes moved: <span class="boxes-moved"></span></p>
           </div>
+
           <div class="page" data-tab-id="tab2">
+            <p>The ring seems to pulse with arcane energy, the stone emitting a dim blue glow.</p>
+            <p>You need to learn more about the ring.</p>
+          </div>
+
+          <div class="page" data-tab-id="tab3">
             <p id="fight-msg">Oh noes! You accidentally opened a portal with your ring or spells or whatever. Now small critters are pouring out!</p>
             <br>
             <p>A fearful <span id="critter-name">umbrella</span> carefully pokes its head out!</p>
             <p>HP <span id='critter-hp'>====================</span></p>
             <button onclick="pokeCritter(1)">Poke agressively</button>
           </div>
-          <div class="page" data-tab-id="tab3"></div>
+
+          <div class="page" data-tab-id="tab4"></div>
+          <div class="page" data-tab-id="tab5"></div>
         </div>
       </div>
     </main>

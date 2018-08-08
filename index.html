@@ -75,16 +75,21 @@
         </div>
         <div id="content">
 
-          <div class="page active" data-tab-id="tab1">
+          <div class="page " data-tab-id="tab1">
             <p>You're standing in your dusty basement. You should really clean this place soon....</p>
             <button onclick="onBoxMoved()">Move a box</button>
             <br><br>
             <p>Boxes moved: <span class="boxes-moved"></span></p>
           </div>
 
-          <div class="page" data-tab-id="tab2">
+          <div class="page active" data-tab-id="tab2">
             <p>The ring seems to pulse with arcane energy, the stone emitting a dim blue glow.</p>
             <p>You need to learn more about the ring.</p>
+
+            <div id="ring-intro-btn" onclick="introButtonClicked()">
+              <div class='progress'></div>
+              <span class='label'>Put it on</span>
+            </div>
           </div>
 
           <div class="page" data-tab-id="tab3">

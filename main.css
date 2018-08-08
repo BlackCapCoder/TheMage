@@ -78,3 +78,20 @@ log .wrapper .log-message {
   border: 1px solid rgba(0,0,0,0.4);
   margin-right: 10px;
 }
+
+#ring-intro-btn {
+  border: 1px solid rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 5px 20px;
+  background: rgba(0,0,0,0.05);
+  cursor: pointer;
+  position: relative;
+}
+#ring-intro-btn .progress {
+  background: rgba(0,0,255,0.2);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}

@@ -6,7 +6,8 @@ var boxEvent = (function () {
     setInterval (_ => {
     	resources.mana.val = Math.min(resources.mana.val+1, resources.manaMax.val);
   	}, 1000);
-    document.querySelector('#ring').classList.remove('hidden');
+    document.querySelector('#sidebar').classList.remove('hidden');
+    document.querySelector('#tabs #header').classList.remove('hidden');
     log("You found a ring under a box");
   };
 })();

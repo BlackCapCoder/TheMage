@@ -40,6 +40,7 @@ body {
 /* This would eventually be hidden completely */
 * { opacity: 1; transition: opacity 2.0s ease; }
 .hidden { opacity: 0.3 !important; }
+.uHidd { visibility: hidden !important; opacity: 0.0 !important;}
 
 #ring {
   position: relative;

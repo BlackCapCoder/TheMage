@@ -8,6 +8,8 @@ var boxEvent = (function () {
   	}, 1000);
     document.querySelector('#sidebar').classList.remove('hidden');
     document.querySelector('#tabs #header').classList.remove('hidden');
+    document.querySelector('#tab2').innerText = "Research";
+    document.querySelector('#tab2').classList.remove('uHidd');
     document.querySelector('log').classList.remove('hidden');
     log("You found a ring under a box");
   };
